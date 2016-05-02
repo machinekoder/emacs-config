@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name : angular-module
+# key : amod
+# --
+angular.module("$1", [$2])
