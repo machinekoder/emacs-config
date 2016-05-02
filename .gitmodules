@@ -1,0 +1,15 @@
+[submodule "emacs-livedown"]
+	path = lisp/emacs-livedown
+	url = https://github.com/shime/emacs-livedown
+
+[submodule "helm-deft"]
+	path = lisp/helm-deft
+	url = https://github.com/dfeich/helm-deft
+
+[submodule "helm-mu"]
+	path = lisp/helm-mu
+	url = https://github.com/emacs-helm/helm-mu
+
+[submodule "use-package"]
+	path = lisp/use-package
+	url = https://github.com/jwiegley/use-package
