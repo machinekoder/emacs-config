@@ -44,7 +44,8 @@
 
   (add-to-list 'load-path "~/.emacs.d/config/")
   (load "main.el")
-  (load "private.el")
+  (load "private.el" t t)
+  (load "work.el" t t)
 ;;;
 )
 ;;;

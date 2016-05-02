@@ -287,6 +287,7 @@
     ("C-x b" . helm-mini)
     ("C-x C-f" . helm-find-files)
     ("s-b" . helm-bookmarks)
+    ("C-c i" . helm-imenu)
     :map helm-map
     ("<tab>" . helm-execute-persistent-action) ; rebind tab to run persistent action
     ("C-i" . helm-execute-persistent-action) ; make TAB works in terminal
@@ -552,6 +553,13 @@
   :config
   (setq highlight-symbol-idle-delay 0.2)
   (add-hook 'prog-mode-hook 'highlight-symbol-mode))
+
+;; Editorconfig
+(use-package editorconfig
+  :ensure t
+  :config
+  (editorconfig-mode 1)
+  )
 
 ;; Point undo - not sure
 (use-package point-undo
