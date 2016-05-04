@@ -42,10 +42,9 @@
   (setq custom-file "~/.gnu-emacs-custom")
   (load "~/.gnu-emacs-custom" t t)
 
-  (add-to-list 'load-path "~/.emacs.d/config/")
-  (load "main.el")
-  (load "private/private.el" t t)
-  (load "work.el" t t)
+  (load "~/.emacs.d/config/main.el")
+  (load "~/.emacs.d/config/private/private.el" t t)
+  (load "~/.emacs.d/config/work/work.el" t t)
 ;;;
 )
 ;;;

@@ -116,9 +116,9 @@
     :bind ("s-t" . toggle-theme))
 
   ;;; Fonts
-  (set-default-font "Droid Sans Mono Slashed 9")
-  (add-to-list 'default-frame-alist
-               '(font . "Droid Sans Mono Slashed 9"))
+(set-default-font "Hack-9.5")
+(add-to-list 'default-frame-alist
+             '(font . "Hack-9.5"))
 
   ;;; Flymake
   (use-package flymake
