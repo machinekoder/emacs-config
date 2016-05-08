@@ -451,9 +451,11 @@
   (use-package ac-html-bootstrap :ensure t)
   (use-package ac-c-headers :ensure t)
   (use-package ac-etags :ensure t)
+  (use-package fuzzy :ensure t)
   (ac-config-default)
   (setq ac-auto-show-menu 0.0)
   (setq ac-delay 0.0)
+  (setq ac-use-fuzzy t)
   )
 
   ;;; Abbrevations
