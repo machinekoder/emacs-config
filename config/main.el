@@ -450,9 +450,18 @@
   (use-package ac-html :ensure t)
   (use-package ac-html-angular :ensure t)
   (use-package ac-html-bootstrap :ensure t)
-  (use-package ac-c-headers :ensure t)
   (use-package ac-etags :ensure t)
   (use-package fuzzy :ensure t)
+  (use-package function-args :ensure t
+    :config
+    (fa-config-default))
+  (use-package ac-c-headers :ensure t
+    :config
+    (add-hook 'c-mode-hook
+              (lambda ()
+                (add-to-list 'ac-sources 'ac-source-c-headers)
+                (add-to-list 'ac-sources 'ac-source-c-header-symbols t)))
+    )
   (ac-config-default)
   (setq ac-auto-show-menu 0.0)
   (setq ac-delay 0.0)
