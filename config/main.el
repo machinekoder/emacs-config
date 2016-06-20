@@ -32,6 +32,7 @@
   (show-paren-mode t)
 (tool-bar-mode -1)
 (electric-pair-mode 1)
+(setq electric-pair-preserve-balance nil)
 
   ;; Disable backup files
   (setq make-backup-files nil)
