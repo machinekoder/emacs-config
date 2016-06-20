@@ -118,6 +118,7 @@
 
   ;;; Fonts
 (set-default-font "Hack-9.5")
+;;(set-default-font "Droid Sans Mono Slashed-9.5")
 (add-to-list 'default-frame-alist
              '(font . "Hack-9.5"))
 
