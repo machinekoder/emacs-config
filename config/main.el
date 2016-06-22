@@ -66,8 +66,12 @@
   ;; Setup line numbers
   (use-package linum
     :config
-  ;;(setq linum-format "%4d\u23AE")
-    (global-linum-mode 1)
+    ;;(setq linum-format "%4d") ;;"\u23AE")
+    (use-package linum-off
+      :ensure t
+      :config
+      (global-linum-mode t)
+      )
     (setq linum-disabled-modes-list '(dired-mode
                                       mu4e-headers-mode
                                       mu4e-view-mode
@@ -104,7 +108,7 @@
       (interactive)
       (if dark-theme-active
           (progn
-            (load-theme 'base16-atelierforest-light t)
+            (load-theme 'base16-pop-light t)
             (setq dark-theme-active nil))
         (progn
           (load-theme 'base16-atelierforest-dark t)
