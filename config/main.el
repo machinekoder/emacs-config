@@ -394,6 +394,9 @@
     (setq jedi:complete-on-dot t)                 ; optional
     )
 
+   (use-package cython-mode
+     :ensure t)
+
   ;; Nameses
   (use-package nameses
     :ensure desktop+
