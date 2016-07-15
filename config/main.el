@@ -387,38 +387,6 @@
       ;;(golden-ratio-mode t)
     )
 
-    ;; CEDET
-  ;; (add-to-list 'load-path "~/.emacs.d/lisp/cedet/")
-  ;; (load "cedet-devel-load")
-  ;; ;; Enable EDE (Project Management) features
-  ;; (global-ede-mode 1) ; Enable the project management system
-  ;; (semantic-load-enable-excessive-code-helpers)      ; Enable prototype help and smart completion
-
-  ;; ;; Semantic
-  ;; (global-semantic-idle-scheduler-mode)
-  ;; (global-semantic-idle-completions-mode)
-  ;; (global-semantic-decoration-mode)
-  ;; ;; (global-semantic-highlight-func-mode)
-  ;; (global-semantic-show-unmatched-syntax-mode)
-  ;; (global-semantic-idle-local-symbol-highlight-mode)
-
-  ;; ;; CC-mode
-  ;; (add-hook 'c-mode-common-hook '(lambda ()
-  ;;                                  (setq ac-sources (append '(ac-source-semantic) ac-sources))
-  ;;                                  ))
-
-  (semantic-mode 1)
-  ;; Enable EDE (Project Management) features
-  ;;(global-semanticdb-minor-mode 1)
-  ;;(global-semantic-highlight-func-mode 1)
-  ;;(global-semantic-idle-local-symbol-highlight-mode 1)
-  ;;(global-semantic-decoration-mode 1)
-  ;;(global-semantic-idle-scheduler-mode 1)
-  ;;(global-semantic-idle-completions-mode 1)
-  ;;(semantic-load-enable-code-helpers) ; Enable prototype help and smart completion
-  ;;  (global-semantic-folding-mode 1)
-  ;;  (global-semantic-idle-completions-mode 1)
-
   ;;; Python
   (use-package jedi
     :ensure t
