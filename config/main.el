@@ -472,8 +472,9 @@
                 (add-to-list 'ac-sources 'ac-source-c-header-symbols t)))
     )
   (ac-config-default)
-  (setq ac-auto-show-menu 0.2)
-  (setq ac-delay 0.2)
+  (setq ac-auto-show-menu 0.5)
+  (setq ac-delay 0.5)
+  (setq ac-menu-height 20)
   (setq ac-use-fuzzy t)
   )
 
