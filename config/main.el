@@ -346,6 +346,35 @@
     :bind
     ("C-x C-m" . helm-mu))
 
+  (use-package helm-gtags
+    :ensure t
+    :bind
+    ("C-c g a" . helm-gtags-tags-in-this-function)
+    ("M-s" . helm-gtags-select)
+    ("M-." . helm-gtags-dwim)
+    ("M-," . helm-gtags-pop-stack)
+    ("C-c <" . helm-gtags-previous-history)
+    ("C-c >" . helm-gtags-next-history)
+    :config
+    (setq
+     helm-gtags-ignore-case t
+     helm-gtags-auto-update t
+     helm-gtags-use-input-at-cursor t
+     helm-gtags-pulse-at-cursor t
+     helm-gtags-prefix-key "\C-cg"
+     helm-gtags-suggested-key-mapping t
+     )
+
+    (add-hook 'dired-mode-hook 'helm-gtags-mode)
+    (add-hook 'eshell-mode-hook 'helm-gtags-mode)
+    (add-hook 'c-mode-hook 'helm-gtags-mode)
+    (add-hook 'c++-mode-hook 'helm-gtags-mode)
+    (add-hook 'asm-mode-hook 'helm-gtags-mode)
+    )
+
+  (use-package helm-open-github
+    :ensure t)
+
   ;;; Golden ratio mode
   (use-package golden-ratio
     :ensure t
@@ -541,6 +570,17 @@
     (setq helm-yas-space-match-any-greedy t))
   (yas-global-mode t)
   (yas-load-directory "~/.emacs.d/snippets/")
+  )
+
+;; source code tagging
+(use-package ggtags
+  :ensure t
+  :demand t
+  :config
+  (add-hook 'c-mode-common-hook
+          (lambda ()
+            (when (derived-mode-p 'c-mode 'c++-mode 'java-mode 'asm-mode)
+              (ggtags-mode 1))))
   )
 
 ;; Project Management
