@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: hal-pin-link
+# key: hpl
+# --
+$1.pin('$2').link('$3')
