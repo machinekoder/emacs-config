@@ -223,9 +223,7 @@
 
   ;; HAL file syntax highlighting
   (use-package hal-mode
-    :config
-    ;;(add-hook 'hal-mode-hook (lambda () (electric-indent-local-mode -1)))
-    )
+    :ensure t)
 
   ;;; flyspell
   (use-package flyspell
