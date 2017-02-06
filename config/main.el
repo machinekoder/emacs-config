@@ -656,3 +656,7 @@ by using nxml's indentation rules."
       (backward-char) (insert "\n"))
     (indent-region begin end))
   (message "Ah, much better!"))
+
+;; vala mode
+(use-package vala-mode
+  :ensure t)
