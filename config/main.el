@@ -108,10 +108,10 @@
       (interactive)
       (if dark-theme-active
           (progn
-            (load-theme 'base16-pop-light t)
+            (load-theme 'base16-github t)
             (setq dark-theme-active nil))
         (progn
-          (load-theme 'base16-atelierforest-dark t)
+          (load-theme 'base16-atelier-forest t)
           (setq dark-theme-active t))
         )
       (my-tone-down-fringes)
