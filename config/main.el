@@ -641,6 +641,10 @@
 (use-package qml-mode
   :ensure t)
 
+;; Gerkin feature mode
+(use-package feature-mode
+  :ensure t)
+
 ;; XML formatting
 (defun bf-pretty-print-xml-region (begin end)
   "Pretty format XML markup in region. You need to have nxml-mode
