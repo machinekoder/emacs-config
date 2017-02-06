@@ -1,7 +1,7 @@
 (require 'generic-x)
 
 (define-generic-mode gcode-generic-mode
-  '((";") ("(" . ")"))
+  '((";") ("("))
   (apply 'append
          (mapcar #'(lambda (s) (list (upcase s) (downcase s) (capitalize s)))
                  '("sub" "endsub" "if" "do" "while" "endwhile" "call" "endif"
