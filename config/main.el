@@ -661,6 +661,10 @@ by using nxml's indentation rules."
     (indent-region begin end))
   (message "Ah, much better!"))
 
+;; Tiny macros
+(use-package tiny
+  :ensure t)
+
 ;; vala mode
 (use-package vala-mode
   :ensure t)
