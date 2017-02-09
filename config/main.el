@@ -560,7 +560,6 @@
   :config
   (use-package helm-projectile :ensure t)
   (use-package projectile-speedbar :ensure t)
-  (projectile-global-mode)
   (helm-projectile-on)
   )
 
