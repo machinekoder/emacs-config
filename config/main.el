@@ -31,6 +31,7 @@
   (scroll-bar-mode t)
   (show-paren-mode t)
 (tool-bar-mode -1)
+(menu-bar-mode -1)
 (electric-pair-mode 1)
 (setq electric-pair-preserve-balance nil)
 
