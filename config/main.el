@@ -675,3 +675,7 @@ by using nxml's indentation rules."
                     ("More"
                      ("h" "highlighters ..." makey-key-mode-popup-isearch-highlight))))
    :bind "M-s"))
+
+;; global keyboard shortcuts
+(global-set-key [f6] 'compile)
+
