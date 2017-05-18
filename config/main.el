@@ -676,6 +676,12 @@ by using nxml's indentation rules."
                      ("h" "highlighters ..." makey-key-mode-popup-isearch-highlight))))
    :bind "M-s"))
 
+;; open Emacs from Chrome
+(use-package edit-server
+  :ensure t
+  :config
+  (edit-server-start))
+
 ;; global keyboard shortcuts
 (global-set-key [f6] 'compile)
 
