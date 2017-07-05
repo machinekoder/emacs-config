@@ -578,7 +578,6 @@
   :ensure t
   :config
   ;;(add-hook 'after-init-hook 'global-color-identifiers-mode)
-  (add-hook 'after-init-hook 'global-color-identifiers-mode)
   (add-to-list 'color-identifiers:modes-alist
                '(angular-mode
                 "[^.][[:space:]]*" "\\_<\\([a-zA-Z_$]\\(?:\\s_\\|\\sw\\)*\\)"
