@@ -689,6 +689,13 @@ by using nxml's indentation rules."
   :config
   (edit-server-start))
 
+(use-package git-link
+  :ensure t
+  :config
+  (setq git-link-open-in-browser 1)
+  )
+
 ;; global keyboard shortcuts
 (global-set-key [f6] 'compile)
+(global-set-key [f4] 'git-link-homepage)
 
