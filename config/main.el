@@ -695,6 +695,9 @@ by using nxml's indentation rules."
   (setq git-link-open-in-browser 1)
   )
 
+(use-package swap-regions
+  :ensure t)
+
 ;; global keyboard shortcuts
 (global-set-key [f6] 'compile)
 (global-set-key [f4] 'git-link-homepage)
