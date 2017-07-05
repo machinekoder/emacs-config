@@ -678,6 +678,11 @@ by using nxml's indentation rules."
                      ("h" "highlighters ..." makey-key-mode-popup-isearch-highlight))))
    :bind "M-s"))
 
+;; Regex Madness
+(require 're-builder)
+(require 're-builder+)
+(setq reb-re-syntax 'string)
+
 ;; open Emacs from Chrome
 (use-package edit-server
   :ensure t
