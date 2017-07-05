@@ -698,6 +698,9 @@ by using nxml's indentation rules."
 (use-package swap-regions
   :ensure t)
 
+(use-package realgud
+  :ensure t)
+
 ;; global keyboard shortcuts
 (global-set-key [f6] 'compile)
 (global-set-key [f4] 'git-link-homepage)
