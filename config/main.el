@@ -35,6 +35,9 @@
 (electric-pair-mode 1)
 (setq electric-pair-preserve-balance nil)
 
+;; move tramp autosave files to local storage
+(setq tramp-auto-save-directory "~/emacs/tramp-autosave")
+
   ;; Disable backup files
   (setq make-backup-files nil)
 
