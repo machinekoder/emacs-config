@@ -33,6 +33,7 @@
 (tool-bar-mode -1)
 (menu-bar-mode -1)
 (electric-pair-mode 1)
+(electric-indent-mode 1)
 (setq electric-pair-preserve-balance nil)
 
 ;; move tramp autosave files to local storage
