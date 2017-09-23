@@ -28,7 +28,7 @@
   (delete-selection-mode t)
   ;; Emacs cusomization
   (column-number-mode t)
-  (scroll-bar-mode t)
+  (scroll-bar-mode -1)
   (show-paren-mode t)
 (tool-bar-mode -1)
 (menu-bar-mode -1)
