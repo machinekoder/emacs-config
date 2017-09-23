@@ -132,34 +132,6 @@
 (add-to-list 'default-frame-alist
              '(font . "Hack-9.5"))
 
-  ;;; Flymake
-  (use-package flymake
-    :ensure t
-    :config
-    ;; run flymake in place to work with tramp
-    (setq flymake-run-in-place nil)
-    ;; Setup flymake for Python
-    (when (load "flymake" t)
-      (defun flymake-pylint-init ()
-        (let* ((temp-file (flymake-init-create-temp-buffer-copy
-                           'flymake-create-temp-inplace))
-               (local-file (file-relative-name
-                            temp-file
-                            (file-name-directory buffer-file-name))))
-          (list "~/bin/pycheckers"  (list local-file))))
-      (add-to-list 'flymake-allowed-file-name-masks
-                   '("\\.py\\'" flymake-pylint-init)))
-
-    (add-hook 'python-mode-hook
-              (lambda ()
-                (unless (eq buffer-file-name nil) (flymake-mode 1)) ;dont invoke flymake on temporary buffers for the interpreter
-                (local-set-key [f2] 'flymake-goto-prev-error)
-                (local-set-key [f3] 'flymake-goto-next-error)
-                ))
-    )
-  ;; Show flymake cursor
-  (use-package flymake-cursor :ensure t)
-
   ;;; Show Whitespace including tabs
   (use-package whitespace
     :config
@@ -393,11 +365,31 @@
 
   ;;; Python
   (use-package jedi
+     :ensure t
+     :config
+     (add-hook 'python-mode-hook 'jedi:setup)
+  ;;   (setq jedi:complete-on-dot t)                 ; optional
+     )
+
+  (use-package elpy
     :ensure t
     :config
-    (add-hook 'python-mode-hook 'jedi:setup)
-    (setq jedi:complete-on-dot t)                 ; optional
+    (elpy-enable)
+    (setq elpy-rpc-backend "jedi")
+    (setq elpy-test-runner 'elpy-test-pytest-runner))
+
+  (use-package flycheck
+    :ensure t
+    :config
+    (setq elpy-modules (delq 'elpy-module-flymake elpy-modules))
+    (add-hook 'elpy-mode-hook 'flycheck-mode)
+    (setq-default flycheck-flake8-maximum-line-length 120)
     )
+
+  (use-package py-autopep8
+    :ensure t
+    :config
+    (add-hook 'elpy-mode-hook 'py-autopep8-enable-on-save))
 
    (use-package cython-mode
      :ensure t)
