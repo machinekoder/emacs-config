@@ -38,6 +38,7 @@
 
 ;; move tramp autosave files to local storage
 (setq tramp-auto-save-directory "~/emacs/tramp-autosave")
+(setq tramp-default-method "ssh")
 
   ;; Disable backup files
   (setq make-backup-files nil)
