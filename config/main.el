@@ -695,6 +695,21 @@ by using nxml's indentation rules."
 (use-package realgud
   :ensure t)
 
+
+;; line ending helper functions
+(defun unix-file ()
+  "Change the current buffer to Latin 1 with Unix line-ends."
+  (interactive)
+  (set-buffer-file-coding-system 'iso-latin-1-unix t))
+(defun dos-file ()
+  "Change the current buffer to Latin 1 with DOS line-ends."
+  (interactive)
+  (set-buffer-file-coding-system 'iso-latin-1-dos t))
+(defun mac-file ()
+  "Change the current buffer to Latin 1 with Mac line-ends."
+  (interactive)
+  (set-buffer-file-coding-system 'iso-latin-1-mac t))
+
 ;; global keyboard shortcuts
 (global-set-key [f6] 'compile)
 (global-set-key [f4] 'git-link-homepage)
