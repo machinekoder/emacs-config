@@ -61,10 +61,10 @@
   ;; Spaces instead of tabs
   (setq-default indent-tabs-mode nil)
   (setq-default tab-width 4)
-  (setq indent-line-function 'insert-tab)
+  (setq-default indent-line-function 'insert-tab)
   (setq tab-stop-list (number-sequence 4 200 4))
-  (setq c-default-style "linux"
-        c-basic-offset 4)
+  (setq-default c-default-style "linux"
+                c-basic-offset 4)
 
   ;; Show matching parenthesis
   (show-paren-mode 1)
